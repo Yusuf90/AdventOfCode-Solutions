@@ -1,0 +1,438 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Day1/Puzzle1.py",
+			"settings":
+			{
+				"buffer_size": 30,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Day1/Puzzle1.txt",
+			"settings":
+			{
+				"buffer_size": 1553,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				"Syntax Check"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 157.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Yusuf.Syakur/Documents/MEGA/AdventOfCode2019",
+		"/C/Users/Yusuf.Syakur/Documents/MEGA/AdventOfCode2019/Day1"
+	],
+	"file_history":
+	[
+		"/C/Users/Yusuf.Syakur/AppData/Roaming/Sublime Text 3/Packages/User/newPython3.sublime-build",
+		"/C/temp/USoft_logs/ServiceInstall.log",
+		"/C/Users/Yusuf.Syakur/Documents/MEGA/AdventOfCode2019/Day1/Puzzle1.py",
+		"/C/Users/Yusuf.Syakur/Documents/Graphics/SkillKeeper/Results2.csv",
+		"/C/temp/pipedstreamR-CS/matrix_data2D.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Graphics/SkillKeeper/Results.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Graphics/SkillKeeper/ResultsAfterV.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM/20181stHalf/PRM + flight (01-06-2018 - 30-06-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM/20181stHalf/PRM + flight (01-05-2018 - 31-05-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM/PRM + flight (01-01-2017 - 31-01-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM/20181stHalf/PRMJun2018.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM/20181stHalf/PRM_leftovers.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/ValidationFase3/training_data.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Validation/test_data.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Validation/training_data.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM/training_data.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM/combine.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM/20181stHalf/PRM + flight (01-04-2018 - 30-04-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM/20181stHalf/PRM + flight (01-03-2018 - 31-03-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM/20181stHalf/PRM + flight (01-02-2018 - 28-02-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM/20181stHalf/PRMFeb2018.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Tasks/20181sthalf/TaskFeb2018.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Tasks/20181sthalf/TaskJun2018.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Tasks/20181sthalf/TaskMay2018.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Tasks/20181sthalf/Task (01-06-2018 - 30-06-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Tasks/20181sthalf/Task (01-05-2018 - 31-05-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Tasks/20181sthalf/TaskApr2018.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Tasks/20181sthalf/Task (01-04-2018 - 30-04-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Tasks/20181sthalf/TaskMar2018.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Tasks/20181sthalf/Task (01-03-2018 - 31-03-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Tasks/20181sthalf/Task (01-02-2018 - 28-02-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM/20181stHalf/PRMMar2018.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM/20181stHalf/PRMMay2018.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM/20181stHalf/PRMApr2018.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM/PRM + flight (01-02-2018 - 28-02-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/TaskTest.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRMTest.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Flights/flightsJun2017-Nov2018.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Tasks/20181sthalf/TASK1STHALF2018.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/FlightsTest.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM/20181stHalf/PRM1STHALF2018.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (01-07-2018 - 31-07-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (01-01-2018 - 31-01-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/W18 SIR540 26-01-2019 tm 30-03-2019.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM/PRM + flight (01-01-2018 - 31-01-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM/PRM(2018-JAN)_NO_DUP.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Flights/combine.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Flights/Flights (31-05-2017 - 31-12-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Tasks/combine.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-01-2018 - 31-01-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM/PRMTest/combine.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM/PRMTest/PRM + flight (01-01-2017 - 31-01-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRMTest2.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/Usoft datadump v3 (01-01-2017 - 31-01-2017) (Testdump).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRMTest.csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-01-2017 - 31-01-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Flights (01-01-2018 - 30-06-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Flights (01-07-2018 - 30-11-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Flights (31-05-2017 - 31-12-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (01-09-2017 - 30-09-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (01-08-2018 - 31-08-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (01-09-2018 - 30-09-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (01-10-2017 - 31-10-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (01-10-2018 - 31-10-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (01-11-2017 - 30-11-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (01-11-2018 - 30-11-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (01-12-2016 - 31-12-2016).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (01-12-2017 - 31-12-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (31-05-2017 - 30-06-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (01-01-2017 - 31-01-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (01-02-2018 - 28-02-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (01-02-2017 - 28-02-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (01-03-2018 - 31-03-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (01-03-2017 - 31-03-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (01-04-2017 - 30-04-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (01-05-2017 - 30-05-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (01-04-2018 - 30-04-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (01-05-2018 - 31-05-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (01-06-2018 - 30-06-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (01-07-2017 - 31-07-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/Task (01-08-2017 - 31-08-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/Task (01-01-2018 - 31-01-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-01-2018 - 31-01-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (31-05-2017 - 30-06-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-12-2017 - 31-12-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-02-2017 - 28-02-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-02-2018 - 28-02-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-03-2017 - 31-03-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-03-2018 - 31-03-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-04-2017 - 30-04-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-04-2018 - 30-04-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-05-2017 - 30-05-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-06-2018 - 30-06-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-05-2018 - 31-05-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-07-2018 - 31-07-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-07-2017 - 31-07-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-08-2018 - 31-08-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-08-2017 - 31-08-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-09-2017 - 30-09-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-10-2017 - 31-10-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-09-2018 - 30-09-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-10-2018 - 31-10-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-11-2017 - 30-11-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-11-2018 - 30-11-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-12-2016 - 31-12-2016).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-10-2018 - 31-10-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-01-2017 - 31-01-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-02-2017 - 28-02-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-02-2018 - 28-02-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-03-2017 - 31-03-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-03-2018 - 31-03-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-04-2017 - 30-04-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-04-2018 - 20-04-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-05-2017 - 30-05-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-05-2018 - 31-05-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-07-2017 - 31-07-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-06-2018 - 30-06-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-07-2018 - 31-07-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-08-2017 - 31-08-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-08-2018 - 31-08-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-09-2017 - 30-09-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-09-2018 - 30-09-2018).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-10-2017 - 31-10-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-11-2016 - 30-11-2016).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-11-2017 - 30-11-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-12-2016 - 31-12-2016).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-12-2017 - 31-12-2017).csv",
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (21-04-2018 - 31-05-2018).csv"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+			"<open files>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"321952930",
+			"321952930\\",
+			"335438351",
+			"326504662",
+			"Task Start",
+			"31-01-2018",
+			"Area",
+			"Zelf",
+			"01-07-2018,Outbound,KL 1973",
+			"16-06-2017,Inbound,EZY",
+			"pax",
+			"Schengen",
+			"Duration",
+			"Booking Time",
+			"312712784",
+			"310562463",
+			"310506576",
+			"310504514",
+			"310504512",
+			"310504482",
+			"310487810",
+			"310486933",
+			"310477022",
+			"310465518",
+			"310395903",
+			"310970272",
+			"23:17",
+			"goshow",
+			"Searching",
+			"unknown",
+			"DEAF",
+			"WCHR",
+			" WCHR",
+			"agreed",
+			"code",
+			"23:17",
+			"0-311217051",
+			"313093258",
+			"0-310568638",
+			"22:",
+			"23:"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Day1/Puzzle1.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 30,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								29,
+								29
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Day1/Puzzle1.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1553,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1409,
+								1409
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Diff/Diff.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 126.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/newPython3.sublime-build",
+	"project": "AdventOfCode2019.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 270.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
