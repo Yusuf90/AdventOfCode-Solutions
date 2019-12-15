@@ -77,7 +77,3 @@ inp_array = np.loadtxt(fname='D2P1Input.txt', delimiter=',').astype(int)
 
 noun_verb = Calculate_input(inp_array, 19690720, 0, 99, 0, 0)
 print(noun_verb)
-
-inp_array_tjell = np.loadtxt(fname='input.txt', delimiter=',').astype(int)
-noun_verb = Calculate_input(inp_array_tjell, 19690720, 0, 99, 0, 97)
-print(noun_verb)
