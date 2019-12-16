@@ -6,7 +6,9 @@ def processInstruction(iTup_Route, i_posX, i_posY, s_coordinate):
     s_letter = s_coordinate[0]
     i_amount = int(s_coordinate[1:])
     for _iCounter in range(i_amount + 1):
-        if s_letter == 'U':
+        if _iCounter == 0:
+            continue
+        elif s_letter == 'U':
             iTupTemp.append((i_posX, i_posY - _iCounter))            
         elif s_letter == 'R':
             iTupTemp.append((i_posX + _iCounter, i_posY))
@@ -29,8 +31,8 @@ def calcCoordinates(inp):
     return iTup_Route
 
 def closestManhattenDistance(inp1, inp2):
-    iTup_Route1 = calcCoordinates(inp1)[1:]
-    iTup_Route2 = calcCoordinates(inp2)[1:]
+    iTup_Route1 = calcCoordinates(inp1)
+    iTup_Route2 = calcCoordinates(inp2)
     iTup_CrossCoordinates = list(set(iTup_Route1) & set(iTup_Route2))
     first_tup = iTup_CrossCoordinates[0]
     iSmallestDistance = abs(first_tup[0]) + abs(first_tup[1])
@@ -41,11 +43,34 @@ def closestManhattenDistance(inp1, inp2):
             iSmallestDistance = iDistance
     return iSmallestDistance
 
+def fewestCombinedSteps(inp1, inp2):
+    iTup_Route1 = calcCoordinates(inp1)
+    iTup_Route2 = calcCoordinates(inp2)
+    iTup_CrossCoordinates = list(set(iTup_Route1) & set(iTup_Route2))
+    first_tup = iTup_CrossCoordinates[0]
+    iFewestSteps1 = [index for index, value in enumerate(iTup_Route1) if value == first_tup][0] + 1
+    iFewestSteps2 = [index for index, value in enumerate(iTup_Route2) if value == first_tup][0] + 1
+    iFewestSteps = iFewestSteps1 + iFewestSteps2
+    iTup_CrossCoordinates = iTup_CrossCoordinates[1:]
+    for iTup in iTup_CrossCoordinates:
+        iSteps1 = [index for index, value in enumerate(iTup_Route1) if value == iTup][0] + 1
+        iSteps2 = [index for index, value in enumerate(iTup_Route2) if value == iTup][0] + 1
+        iSteps = iSteps1 + iSteps2
+        if iFewestSteps > iSteps:
+            iFewestSteps = iSteps
+    return iFewestSteps
+
 #Get to current directory of puzzle
-os.chdir(os.getcwd() + r'\Day3')
+#os.chdir(os.getcwd() + r'\Day3')
 
 with open('D3P1Input.txt', 'r') as file_input:
     temp = file_input.read().splitlines()
     inp1 = temp[0].split(',')
     inp2 = temp[1].split(',')
     print(closestManhattenDistance(inp1, inp2))
+
+with open('D3P1Input.txt', 'r') as file_input:
+    temp = file_input.read().splitlines()
+    inp1 = temp[0].split(',')
+    inp2 = temp[1].split(',')
+    print(fewestCombinedSteps(inp1, inp2))
