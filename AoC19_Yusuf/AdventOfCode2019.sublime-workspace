@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"_s",
+				"_sParameterMode"
+			],
+			[
+				"iAr",
+				"iArr_input"
+			],
+			[
+				"_iVal",
+				"_iValueToStore"
+			],
+			[
 				"s",
 				"_sLDigits"
 			],
@@ -35,8 +47,43 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Day5/D5.py",
+			"settings":
+			{
+				"buffer_size": 5014,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Day2/D2.py",
+			"settings":
+			{
+				"buffer_size": 2876,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Day5/D5Input.txt",
+			"settings":
+			{
+				"buffer_size": 2551,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Day5/D5Puzzle.txt",
+			"settings":
+			{
+				"buffer_size": 7789,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
-	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system": "",
 	"build_system_choices":
 	[
 		[
@@ -87,12 +134,19 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf",
+		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day2",
+		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day4",
+		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day5"
+	],
 	"file_history":
 	[
+		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day2/D2.py",
+		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day4/D4.py",
 		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day4/D4Input1.txt",
 		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day4/D4Puzzle.txt",
-		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day4/D4.py",
-		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day2/D2.py",
 		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day3/D3.py",
 		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day3/D3DummyInput.txt",
 		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day3/D3P1Input.txt",
@@ -227,7 +281,6 @@
 		"height": 104.0,
 		"where_history":
 		[
-			"<open files>"
 		]
 	},
 	"find_state":
@@ -235,47 +288,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"321952930",
-			"321952930\\",
-			"335438351",
-			"326504662",
-			"Task Start",
-			"31-01-2018",
-			"Area",
-			"Zelf",
-			"01-07-2018,Outbound,KL 1973",
-			"16-06-2017,Inbound,EZY",
-			"pax",
-			"Schengen",
-			"Duration",
-			"Booking Time",
-			"312712784",
-			"310562463",
-			"310506576",
-			"310504514",
-			"310504512",
-			"310504482",
-			"310487810",
-			"310486933",
-			"310477022",
-			"310465518",
-			"310395903",
-			"310970272",
-			"23:17",
-			"goshow",
-			"Searching",
-			"unknown",
-			"DEAF",
-			"WCHR",
-			" WCHR",
-			"agreed",
-			"code",
-			"23:17",
-			"0-311217051",
-			"313093258",
-			"0-310568638",
-			"22:",
-			"23:"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -290,11 +302,133 @@
 		"whole_word": false,
 		"wrap": true
 	},
+	"folders":
+	[
+		{
+			"path": "C:\\Users\\yusuf.syakur\\Documents\\AoC2019\\AoC19_Yusuf"
+		}
+	],
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Day5/D5.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5014,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4888,
+								4888
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1296.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Day2/D2.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2876,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1154,
+								1047
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Day5/D5Input.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2551,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								2551
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Day5/D5Puzzle.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7789,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5191,
+								5191
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Diff/Diff.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 647.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -338,7 +472,7 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "Packages/User/newPython3.sublime-build",
-	"project": "AdventOfCode2019.sublime-project",
+	"project": "",
 	"replace":
 	{
 		"height": 50.0
@@ -376,9 +510,9 @@
 	{
 	},
 	"show_minimap": true,
-	"show_open_files": true,
+	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 270.0,
 	"status_bar_visible": true,
 	"template_settings":
