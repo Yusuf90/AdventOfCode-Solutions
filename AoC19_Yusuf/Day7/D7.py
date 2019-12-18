@@ -136,12 +136,14 @@ def amplify(iArr_input, iArr_phaseSetting):
 		_iOutputAmp = intCode(_iArrTemp, 0, _iPhase, _iOutputAmp)
 		if _iOutputAmp == -1:
 			print("Something went wrong!")
+	first_input_used = False
 	return _iOutputAmp
 
-def determineMaxSignal(iArr_input, i_Phase_length):
+def determineMaxSignal(iArr_input, i_Phase_Min, i_Phase_Max):
+	_iLPhases = list(range(i_Phase_Min, i_Phase_Max))
 	_iMaxSignal = 0
-	_iMaxPhaseSetting = [0] * i_Phase_length
-	for _iLCombo in permutations(list(range(i_Phase_length))):
+	_iMaxPhaseSetting = [0] * len(_iLPhases)
+	for _iLCombo in permutations(_iLPhases):
 		_iTempSignal = amplify(iArr_input, _iLCombo)
 		if _iTempSignal > _iMaxSignal:
 			_iMaxSignal = _iTempSignal
@@ -150,10 +152,27 @@ def determineMaxSignal(iArr_input, i_Phase_length):
 	print("Max signal output is " + str(_iMaxSignal))
 	return _iMaxSignal
 
+def amplify_feedbackloop(iArr_input, iArr_phaseSetting):
+	global first_input_used
+	_iOutputAmp = 0
+	for _iPhase in iArr_phaseSetting:
+		first_input_used = False
+		_iOutputAmp = intCode(iArr_input, 0, _iPhase, _iOutputAmp)
+		if _iOutputAmp == -1:
+			print("Something went wrong!")
+	first_input_used = False
+	return _iOutputAmp
+
 #Get to current directory of puzzle
 #os.chdir(os.getcwd() + r'\Day7')
 
 #Read input
 inp_array = np.loadtxt(fname='D7Input.txt', delimiter=',').astype(int)
 
-print(determineMaxSignal(inp_array, 5))
+print(determineMaxSignal(inp_array, 5, 9))
+
+#inp_array = np.loadtxt(fname='D7TestInput.txt', delimiter=',').astype(int)
+
+#print(amplify_feedbackloop(inp_array, [9,7,8,5,6]))
+
+#print(determineMaxSignal_feedbackloop(inp_array, 5, 5))
