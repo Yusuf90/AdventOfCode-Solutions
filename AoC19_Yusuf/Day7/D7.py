@@ -190,7 +190,7 @@ class Amplifier:
 		else:
 			_sParameterMode = "000"
 		if(_iOpcode == 99):
-			print("intCode has reached 99. End program!")
+			print("intCode has reached 99. End program for", self.s_name)
 			self.b_haltReached = True
 			return self.i_output
 		elif(_iOpcode == 1):
@@ -296,11 +296,11 @@ class Amplifier:
 
 
 def amplify_feedbackloop(iArr_input, iArr_phaseSetting):
-	AmpA = Amplifier("AmpA", iArr_phaseSetting[0], 0, iArr_input)
-	AmpB = Amplifier("AmpB", iArr_phaseSetting[1], AmpA.Start_Intcode(), iArr_input)
-	AmpC = Amplifier("AmpC", iArr_phaseSetting[2], AmpB.Start_Intcode(), iArr_input)
-	AmpD = Amplifier("AmpD", iArr_phaseSetting[3], AmpC.Start_Intcode(), iArr_input)
-	AmpE = Amplifier("AmpE", iArr_phaseSetting[4], AmpD.Start_Intcode(), iArr_input)
+	AmpA = Amplifier("AmpA", iArr_phaseSetting[0], 0, iArr_input.copy())
+	AmpB = Amplifier("AmpB", iArr_phaseSetting[1], AmpA.Start_Intcode(), iArr_input.copy())
+	AmpC = Amplifier("AmpC", iArr_phaseSetting[2], AmpB.Start_Intcode(), iArr_input.copy())
+	AmpD = Amplifier("AmpD", iArr_phaseSetting[3], AmpC.Start_Intcode(), iArr_input.copy())
+	AmpE = Amplifier("AmpE", iArr_phaseSetting[4], AmpD.Start_Intcode(), iArr_input.copy())
 	AmpA.i_input = AmpE.Start_Intcode()
 	while AmpE.b_haltReached == False:
 		AmpB.i_input = AmpA.Start_Intcode()
@@ -308,18 +308,28 @@ def amplify_feedbackloop(iArr_input, iArr_phaseSetting):
 		AmpD.i_input = AmpC.Start_Intcode()
 		AmpE.i_input = AmpD.Start_Intcode()
 		AmpA.i_input = AmpE.Start_Intcode()
-	print(AmpE.iArr_AmpControlSoft)
 	return AmpE.i_output
+
+def determineMaxSignal_feedbackloop(iArr_input, i_Phase_Min, i_Phase_Max):
+	_iLPhases = list(range(i_Phase_Min, i_Phase_Max+1))
+	_iMaxSignal = 0
+	_iMaxPhaseSetting = [0] * len(_iLPhases)
+	for _iLCombo in permutations(_iLPhases):
+		_iTempSignal = amplify_feedbackloop(iArr_input.copy(), _iLCombo)
+		if _iTempSignal > _iMaxSignal:
+			_iMaxSignal = _iTempSignal
+			_iMaxPhaseSetting = _iLCombo
+	print("With phase setting " + str(_iMaxPhaseSetting))
+	print("Max signal output is " + str(_iMaxSignal))
+	return _iMaxSignal
+
 #Get to current directory of puzzle
 #os.chdir(os.getcwd() + r'\Day7')
 
 #Read input
-inp_array = np.loadtxt(fname='D7TestInput.txt', delimiter=',').astype(int)
-
-#print(determineMaxSignal(inp_array, 0, 5))
+inp_array = np.loadtxt(fname='D7Input.txt', delimiter=',').astype(int)
 
 #inp_array = np.loadtxt(fname='D7TestInput.txt', delimiter=',').astype(int)
+#print(amplify_feedbackloop(inp_array, [9,7,8,5,6]))
 
-print(amplify_feedbackloop(inp_array, [9,8,7,6,5]))
-
-#print(determineMaxSignal_feedbackloop(inp_array, 5, 5))
+print(determineMaxSignal_feedbackloop(inp_array, 5, 9))
