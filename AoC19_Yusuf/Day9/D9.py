@@ -17,50 +17,43 @@ class IntCode:
 		self.i_output = 0
 
 	def Start_Intcode(self):
-		_iOpcode = self.iArr_input[self.i_position]
-		_sParameterMode = ""
-		if _iOpcode > 99:
-			_sParameterMode = str(_iOpcode // 100)
-			_iOpcode = _iOpcode % 100
-			while len(_sParameterMode) < 3:
-				_sParameterMode = f"0{_sParameterMode}"
-		else:
-			_sParameterMode = "000"
-		print(_sParameterMode, _iOpcode, "with pos", self.i_position)
-		if(_iOpcode == 99):
-			print("intCode has reached 99.")
-			return self.i_output
-		elif(_iOpcode == 1):
-			self.opcode_1(_sParameterMode)
-			return self.Start_Intcode()
-		elif(_iOpcode == 2):
-			self.opcode_2(_sParameterMode)
-			return self.Start_Intcode()
-		elif(_iOpcode == 3):
-			self.opcode_3(_sParameterMode)
-			return self.Start_Intcode()
-		elif(_iOpcode == 4):
-			self.opcode_4(_sParameterMode)
-			print("Opcode 4 reached with output", str(self.i_output))
-			return self.Start_Intcode()
-		elif(_iOpcode == 5):
-			self.opcode_5(_sParameterMode)
-			return self.Start_Intcode()
-		elif(_iOpcode == 6):
-			self.opcode_6(_sParameterMode)
-			return self.Start_Intcode()
-		elif(_iOpcode == 7):
-			self.opcode_7(_sParameterMode)
-			return self.Start_Intcode()
-		elif(_iOpcode == 8):
-			self.opcode_8(_sParameterMode)
-			return self.Start_Intcode()
-		elif(_iOpcode == 9):
-			self.opcode_9(_sParameterMode)
-			return self.Start_Intcode()
-		else:
-			print("Something went wrong!")
-			return -1
+		_iOpcode = 0
+		while(_iOpcode != 99):
+			_iOpcode = self.iArr_input[self.i_position]
+			_sParameterMode = ""
+			if _iOpcode > 99:
+				_sParameterMode = str(_iOpcode // 100)
+				_iOpcode = _iOpcode % 100
+				while len(_sParameterMode) < 3:
+					_sParameterMode = f"0{_sParameterMode}"
+			else:
+				_sParameterMode = "000"
+			print(_sParameterMode, _iOpcode, "with pos", self.i_position)
+			if(_iOpcode == 99):
+				print("intCode has reached 99.")
+			elif(_iOpcode == 1):
+				self.opcode_1(_sParameterMode)
+			elif(_iOpcode == 2):
+				self.opcode_2(_sParameterMode)
+			elif(_iOpcode == 3):
+				self.opcode_3(_sParameterMode)
+			elif(_iOpcode == 4):
+				self.opcode_4(_sParameterMode)
+				print("Opcode 4 reached with output", str(self.i_output))
+			elif(_iOpcode == 5):
+				self.opcode_5(_sParameterMode)
+			elif(_iOpcode == 6):
+				self.opcode_6(_sParameterMode)
+			elif(_iOpcode == 7):
+				self.opcode_7(_sParameterMode)
+			elif(_iOpcode == 8):
+				self.opcode_8(_sParameterMode)
+			elif(_iOpcode == 9):
+				self.opcode_9(_sParameterMode)
+			else:
+				print("Something went wrong!")
+				return -1
+		return self.i_output
 
 	def getParam(self, s_parameterMode, i_pos):
 		if s_parameterMode[3-i_pos] == '2':
@@ -133,7 +126,7 @@ class IntCode:
 
 #Read input
 inp_array = np.loadtxt(fname='D9Input.txt', delimiter=',', dtype='int64')
-IC1 = IntCode(1, inp_array)
+IC1 = IntCode(2, inp_array)
 IC1.Start_Intcode()
 
 print(sys.getrecursionlimit())
