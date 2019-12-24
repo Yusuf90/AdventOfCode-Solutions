@@ -2,27 +2,22 @@ import os, math, sys
 import numpy as np
 from itertools import permutations
 
-class Amplifier:
-	iArr_AmpControlSoft = []
+class IntCode:
+	iArr_input = []
 	i_position = 0
 	i_input = 0
-	b_phaseUsed = False
-	b_haltReached = False
-	i_phaseInput = 0
 	i_output = 0
-	s_name = ""
+	i_relativebase = 0
 
-	def __init__(self, s_nameInput, i_phase, i_inputAmp, iArr_inputarray):
-		self.iArr_AmpControlSoft = iArr_inputarray
+	def __init__(self, i_inputFunc, iArr_inputarray):
+		self.iArr_input = iArr_inputarray.copy()
+		self.iArr_input = np.append(self.iArr_input, [0]*1000)
 		self.i_position = 0
-		self.b_phaseUsed = False
-		self.i_phaseInput = i_phase
-		self.i_input = i_inputAmp
+		self.i_input = i_inputFunc
 		self.i_output = 0
-		self.s_name = s_nameInput
 
 	def Start_Intcode(self):
-		_iOpcode = self.iArr_AmpControlSoft[self.i_position]
+		_iOpcode = self.iArr_input[self.i_position]
 		_sParameterMode = ""
 		if _iOpcode > 99:
 			_sParameterMode = str(_iOpcode // 100)
@@ -31,9 +26,9 @@ class Amplifier:
 				_sParameterMode = f"0{_sParameterMode}"
 		else:
 			_sParameterMode = "000"
+		print(_sParameterMode, _iOpcode, "with pos", self.i_position)
 		if(_iOpcode == 99):
-			print("intCode has reached 99. End program for", self.s_name)
-			self.b_haltReached = True
+			print("intCode has reached 99.")
 			return self.i_output
 		elif(_iOpcode == 1):
 			self.opcode_1(_sParameterMode)
@@ -46,8 +41,8 @@ class Amplifier:
 			return self.Start_Intcode()
 		elif(_iOpcode == 4):
 			self.opcode_4(_sParameterMode)
-			print("Opcode 4 reached for", self.s_name, "with output", str(self.i_output))
-			return self.i_output
+			print("Opcode 4 reached with output", str(self.i_output))
+			return self.Start_Intcode()
 		elif(_iOpcode == 5):
 			self.opcode_5(_sParameterMode)
 			return self.Start_Intcode()
@@ -60,78 +55,85 @@ class Amplifier:
 		elif(_iOpcode == 8):
 			self.opcode_8(_sParameterMode)
 			return self.Start_Intcode()
+		elif(_iOpcode == 9):
+			self.opcode_9(_sParameterMode)
+			return self.Start_Intcode()
 		else:
 			print("Something went wrong!")
 			return -1
 
-	def opcode_1(self, s_parameterMode):
-		_iValue1 = self.iArr_AmpControlSoft[self.iArr_AmpControlSoft[self.i_position + 1]] if s_parameterMode[2] == '0' else self.iArr_AmpControlSoft[self.i_position + 1]
-		_iValue2 = self.iArr_AmpControlSoft[self.iArr_AmpControlSoft[self.i_position + 2]] if s_parameterMode[1] == '0' else self.iArr_AmpControlSoft[self.i_position + 2]
-		_iValue3 = _iValue1 + _iValue2
-		if s_parameterMode[0] == '0':
-			self.iArr_AmpControlSoft[self.iArr_AmpControlSoft[self.i_position + 3]] = _iValue3
+	def getParam(self, s_parameterMode, i_pos):
+		if s_parameterMode[3-i_pos] == '2':
+			return self.iArr_input[self.i_relativebase + self.iArr_input[self.i_position + i_pos]]
 		else:
-			self.iArr_AmpControlSoft[self.i_position + 3] = _iValue3
+			return self.iArr_input[self.iArr_input[self.i_position + i_pos]] if s_parameterMode[3-i_pos] == '0' else self.iArr_input[self.i_position + i_pos]
+
+	def setParam(self, s_parameterMode, i_pos, i_valueToStore):
+		if s_parameterMode[3-i_pos] == '0':
+			self.iArr_input[self.iArr_input[self.i_position + i_pos]] = i_valueToStore
+		elif s_parameterMode[3-i_pos] == '1':
+			self.iArr_input[self.i_position + i_pos] = i_valueToStore
+		else: #2
+			self.iArr_input[self.i_relativebase + self.iArr_input[self.i_position + i_pos]] = i_valueToStore
+
+	def opcode_1(self, s_parameterMode):
+		_iValue1 = self.getParam(s_parameterMode, 1)
+		_iValue2 = self.getParam(s_parameterMode, 2)
+		_iValue3 = _iValue1 + _iValue2
+		self.setParam(s_parameterMode, 3, _iValue3)
 		self.i_position += 4
 
 	def opcode_2(self, s_parameterMode):
-		_iValue1 = self.iArr_AmpControlSoft[self.iArr_AmpControlSoft[self.i_position + 1]] if s_parameterMode[2] == '0' else self.iArr_AmpControlSoft[self.i_position + 1]
-		_iValue2 = self.iArr_AmpControlSoft[self.iArr_AmpControlSoft[self.i_position + 2]] if s_parameterMode[1] == '0' else self.iArr_AmpControlSoft[self.i_position + 2]
+		_iValue1 = self.getParam(s_parameterMode, 1)
+		_iValue2 = self.getParam(s_parameterMode, 2)
 		_iValue3 = _iValue1 * _iValue2
-		if s_parameterMode[0] == '0':
-			self.iArr_AmpControlSoft[self.iArr_AmpControlSoft[self.i_position + 3]] = _iValue3
-		else:
-			self.iArr_AmpControlSoft[self.i_position + 3] = _iValue3
+		self.setParam(s_parameterMode, 3, _iValue3)
 		self.i_position += 4
 
 	def opcode_3(self, s_parameterMode):
-		_iValueToStore = self.i_input
-		if self.b_phaseUsed == False:
-			self.b_phaseUsed = True
-			print("Opcode 3: Used phase setting once for", self.s_name)
-			_iValueToStore = self.i_phaseInput
-		if s_parameterMode[2] == '0':
-			self.iArr_AmpControlSoft[self.iArr_AmpControlSoft[self.i_position + 1]] = _iValueToStore
-		else:
-			self.iArr_AmpControlSoft[self.i_position + 1] = _iValueToStore
+		self.setParam(s_parameterMode, 1, self.i_input)
 		self.i_position += 2
 
 	def opcode_4(self, s_parameterMode):
-		self.i_output = self.iArr_AmpControlSoft[self.iArr_AmpControlSoft[self.i_position + 1]] if s_parameterMode[2] == '0' else self.iArr_AmpControlSoft[self.i_position + 1]
+		self.i_output = self.getParam(s_parameterMode, 1)
 		self.i_position += 2
 
 	def opcode_5(self, s_parameterMode):
-		_iFirstParam = self.iArr_AmpControlSoft[self.iArr_AmpControlSoft[self.i_position + 1]] if s_parameterMode[2] == '0' else self.iArr_AmpControlSoft[self.i_position + 1]
-		_iSecondParam = self.iArr_AmpControlSoft[self.iArr_AmpControlSoft[self.i_position + 2]] if s_parameterMode[1] == '0' else self.iArr_AmpControlSoft[self.i_position + 2]
-		if _iFirstParam != 0:
-			self.i_position = _iSecondParam
-		else:
-			self.i_position += 3
+		_iFirstParam = self.getParam(s_parameterMode, 1)
+		_iSecondParam = self.getParam(s_parameterMode, 2)
+		self.i_position = _iSecondParam if _iFirstParam != 0 else self.i_position + 3
 
 	def opcode_6(self, s_parameterMode):
-		_iFirstParam = self.iArr_AmpControlSoft[self.iArr_AmpControlSoft[self.i_position + 1]] if s_parameterMode[2] == '0' else self.iArr_AmpControlSoft[self.i_position + 1]
-		_iSecondParam = self.iArr_AmpControlSoft[self.iArr_AmpControlSoft[self.i_position + 2]] if s_parameterMode[1] == '0' else self.iArr_AmpControlSoft[self.i_position + 2]
-		if _iFirstParam == 0:
-			self.i_position =  _iSecondParam
-		else:
-			self.i_position += 3
+		_iFirstParam = self.getParam(s_parameterMode, 1)
+		_iSecondParam = self.getParam(s_parameterMode, 2)
+		self.i_position = _iSecondParam if _iFirstParam == 0 else self.i_position + 3
 
 	def opcode_7(self, s_parameterMode):
-		_iFirstParam = self.iArr_AmpControlSoft[self.iArr_AmpControlSoft[self.i_position + 1]] if s_parameterMode[2] == '0' else self.iArr_AmpControlSoft[self.i_position + 1]
-		_iSecondParam = self.iArr_AmpControlSoft[self.iArr_AmpControlSoft[self.i_position + 2]] if s_parameterMode[1] == '0' else self.iArr_AmpControlSoft[self.i_position + 2]
+		_iFirstParam = self.getParam(s_parameterMode, 1)
+		_iSecondParam = self.getParam(s_parameterMode, 2)
 		_iValueToStore = 1 if _iFirstParam < _iSecondParam else 0
-		if s_parameterMode[0] == '0':
-			self.iArr_AmpControlSoft[self.iArr_AmpControlSoft[self.i_position + 3]] = _iValueToStore
-		else:
-			self.iArr_AmpControlSoft[self.i_position + 3] = _iValueToStore
+		self.setParam(s_parameterMode, 3, _iValueToStore)
 		self.i_position += 4
 
 	def opcode_8(self, s_parameterMode):
-		_iFirstParam = self.iArr_AmpControlSoft[self.iArr_AmpControlSoft[self.i_position + 1]] if s_parameterMode[2] == '0' else self.iArr_AmpControlSoft[self.i_position + 1]
-		_iSecondParam = self.iArr_AmpControlSoft[self.iArr_AmpControlSoft[self.i_position + 2]] if s_parameterMode[1] == '0' else self.iArr_AmpControlSoft[self.i_position + 2]
+		_iFirstParam = self.getParam(s_parameterMode, 1)
+		_iSecondParam = self.getParam(s_parameterMode, 2)
 		_iValueToStore = 1 if _iFirstParam == _iSecondParam else 0
-		if s_parameterMode[0] == '0':
-			self.iArr_AmpControlSoft[self.iArr_AmpControlSoft[self.i_position + 3]] = _iValueToStore
-		else:
-			self.iArr_AmpControlSoft[self.i_position + 3] = _iValueToStore
+		self.setParam(s_parameterMode, 3, _iValueToStore)
 		self.i_position += 4
+
+	def opcode_9(self, s_parameterMode):
+		_iFirstParam = self.getParam(s_parameterMode, 1)
+		self.i_relativebase += _iFirstParam
+		print(self.i_relativebase)
+		self.i_position += 2
+
+#Get to current directory of puzzle
+#os.chdir(os.getcwd() + r'\Day9')
+
+#Read input
+inp_array = np.loadtxt(fname='D9Input.txt', delimiter=',', dtype='int64')
+IC1 = IntCode(1, inp_array)
+IC1.Start_Intcode()
+
+print(sys.getrecursionlimit())
