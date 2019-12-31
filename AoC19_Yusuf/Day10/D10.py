@@ -1,6 +1,5 @@
 import os, math, sys
 import numpy as np
-from fractions import Fraction
 
 #Get to current directory of puzzle
 #os.chdir(os.getcwd() + r'\Day10')
@@ -111,8 +110,6 @@ def defineTHVaporized(iTupleMap_input, iTuplePos, iAsteroidMaxCount):
 		((calculateAngle(iTuplePos, end), end) for end in _iTupleMap),
 		key=lambda x: (x[0], abs(iTuplePos[0] - x[1][0]) + abs(iTuplePos[1] - x[1][1]))
 	)
-
-	print(angles)
 
 	idx = 0
 	last = angles.pop(idx)
