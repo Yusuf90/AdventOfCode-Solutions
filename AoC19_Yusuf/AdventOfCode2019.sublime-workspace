@@ -4,6 +4,66 @@
 		"selected_items":
 		[
 			[
+				"i_",
+				"i_position"
+			],
+			[
+				"_i",
+				"_iOpcode"
+			],
+			[
+				"_iV",
+				"_iValue3"
+			],
+			[
+				"re",
+				"i_relativebase"
+			],
+			[
+				"i",
+				"i_relativebase"
+			],
+			[
+				"s_",
+				"s_parameterMode"
+			],
+			[
+				"iTo",
+				"iTotalWidth"
+			],
+			[
+				"_ia",
+				"_iArrTemp"
+			],
+			[
+				"_iA",
+				"_iArrSplit"
+			],
+			[
+				"iT",
+				"iTotalWidth"
+			],
+			[
+				"sA",
+				"sArr_picture"
+			],
+			[
+				"iTot",
+				"iTotalWidth"
+			],
+			[
+				"sAr",
+				"sArr_pictures"
+			],
+			[
+				"i_Fe",
+				"i_FewestPicture"
+			],
+			[
+				"sArr",
+				"sArr_picture"
+			],
+			[
 				"iArr",
 				"iArr_input"
 			],
@@ -96,10 +156,6 @@
 				"COL_OBJECT"
 			],
 			[
-				"_i",
-				"_iCurrentIndex"
-			],
-			[
 				"_iC",
 				"_iCurrentIndex"
 			],
@@ -124,10 +180,6 @@
 				"_sLDigits"
 			],
 			[
-				"i_",
-				"i_inputEnd"
-			],
-			[
 				"cri",
 				"criteria_nvrDecrease"
 			],
@@ -148,41 +200,30 @@
 	"buffers":
 	[
 		{
-			"file": "Day7/D7.py",
+			"file": "Day10/D10.py",
 			"settings":
 			{
-				"buffer_size": 13804,
+				"buffer_size": 220,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Day7/D7TestInput.txt",
+			"file": "Day10/D10Puzzle.txt",
 			"settings":
 			{
-				"buffer_size": 85,
-				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "D7TestInput.txt"
-			}
-		},
-		{
-			"file": "Day7/D7Puzzle.txt",
-			"settings":
-			{
-				"buffer_size": 8584,
+				"buffer_size": 3259,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Day7/D7Input.txt",
+			"file": "Day10/D10TestInput.txt",
 			"settings":
 			{
-				"buffer_size": 1257,
+				"buffer_size": 29,
 				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "3,8,1001,8,10,8,105,1,0,0,21,42,67,84,109,122,203,"
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -240,15 +281,30 @@
 	"expanded_folders":
 	[
 		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf",
+		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day10",
 		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day2",
 		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day4",
 		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day5",
 		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day6",
-		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day7"
+		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day7",
+		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day8"
 	],
 	"file_history":
 	[
+		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day10/D10Input.txt",
+		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day7/D7.py",
+		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day9/D9Puzzle.txt",
+		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day9/D9TestInput.txt",
+		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day9/D9Input.txt",
+		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day9/D9.py",
 		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day5/D5.py",
+		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day8/D8TestInput.txt",
+		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day8/D8Input.txt",
+		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day8/D8Puzzle.txt",
+		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day8/D8.py",
+		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day7/D7Puzzle.txt",
+		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day7/D7Input.txt",
+		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day7/D7TestInput.txt",
 		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day5/D5Input.txt",
 		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day6/D6.py",
 		"/C/Users/yusuf.syakur/Documents/AoC2019/AoC19_Yusuf/Day6/D6Puzzle.txt",
@@ -362,20 +418,7 @@
 		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-07-2017 - 31-07-2017).csv",
 		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-08-2018 - 31-08-2018).csv",
 		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-08-2017 - 31-08-2017).csv",
-		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-09-2017 - 30-09-2017).csv",
-		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-10-2017 - 31-10-2017).csv",
-		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-09-2018 - 30-09-2018).csv",
-		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-10-2018 - 31-10-2018).csv",
-		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-11-2017 - 30-11-2017).csv",
-		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-11-2018 - 30-11-2018).csv",
-		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-12-2016 - 31-12-2016).csv",
-		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-10-2018 - 31-10-2018).csv",
-		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-01-2017 - 31-01-2017).csv",
-		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-02-2017 - 28-02-2017).csv",
-		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-02-2018 - 28-02-2018).csv",
-		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-03-2017 - 31-03-2017).csv",
-		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-03-2018 - 31-03-2018).csv",
-		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump oud/axxicomreport-eca8b1/PRM + flight (01-04-2017 - 30-04-2017).csv"
+		"/C/Users/Yusuf.Syakur/Documents/Frank-Axxicom/Axxicom/Datadump/PRM + flight (01-09-2017 - 30-09-2017).csv"
 	],
 	"find":
 	{
@@ -393,6 +436,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"iArr_AmpControlSoft",
 			"iArr_input",
 			"i_position"
 		],
@@ -423,28 +467,27 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Day7/D7.py",
+					"file": "Day10/D10.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13804,
+						"buffer_size": 220,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								13616,
-								13616
+								220,
+								220
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1118.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -452,24 +495,51 @@
 				},
 				{
 					"buffer": 1,
-					"file": "Day7/D7TestInput.txt",
+					"file": "Day10/D10Puzzle.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 85,
+						"buffer_size": 3259,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								45,
-								45
+								3259,
+								3259
 							]
 						],
 						"settings":
 						{
-							"auto_name": "D7TestInput.txt",
+							"syntax": "Packages/Diff/Diff.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Day10/D10TestInput.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 29,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								29,
+								29
+							]
+						],
+						"settings":
+						{
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -477,63 +547,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Day7/D7Puzzle.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8584,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6922,
-								6922
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 270.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Day7/D7Input.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1257,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								1257
-							]
-						],
-						"settings":
-						{
-							"auto_name": "3,8,1001,8,10,8,105,1,0,0,21,42,67,84,109,122,203,",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -572,7 +585,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 126.0
+		"height": 137.0
 	},
 	"output.find_results":
 	{
@@ -619,7 +632,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 270.0,
 	"status_bar_visible": true,
 	"template_settings":
