@@ -1,6 +1,6 @@
 import os, math, sys
 import numpy as np
-
+import matplotlib.pyplot as plt
 
 class IntCode:
 	iArr_input = []
@@ -123,7 +123,7 @@ class IntCode:
 	def opcode_9(self, s_parameterMode):
 		_iFirstParam = self.getParam(s_parameterMode, 1)
 		self.i_relativebase += _iFirstParam
-		print(self.i_relativebase)
+		#print(self.i_relativebase)
 		self.i_position += 2
 
 def paintPanels(inp_array, i_startingColor):
@@ -173,6 +173,15 @@ print(len(_dict1))
 #part 2
 _dict2 = paintPanels(inp_array, 1)
 print(_dict2)
+
+_iArrTuples = []
+for item in _dict2:
+    if _dict2[item] == 1:
+        _iArrTuples.append(item)
+print(_iArrTuples)
+
+plt.scatter(*zip(*_iArrTuples))
+plt.show()
 
 #Move robot current pos
 #Retrieve Tuple
