@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/AoC20_Mitchell/AoC20_Mitchell/AoC20_Mitchell_ConsoleApp/obj
+/AoC20_Mitchell/AoC20_Mitchell/AoC20_Mitchell_ConsoleApp/bin/Debug/netcoreapp3.1
+/AoC20_Mitchell/AoC20_Mitchell/.vs/AoC20_Mitchell
