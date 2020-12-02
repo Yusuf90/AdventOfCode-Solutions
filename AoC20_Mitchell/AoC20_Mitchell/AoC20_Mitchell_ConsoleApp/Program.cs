@@ -9,10 +9,7 @@ namespace AoC20_Mitchell_ConsoleApp
         static void Main(string[] args)
         {
             Console.WriteLine("Fakka World!");
-            
-            day1.Day1a();
-            day1.Day1b();
-            day1.Day1sexy();
+            Day2.Day2a();
         }
     }
 }

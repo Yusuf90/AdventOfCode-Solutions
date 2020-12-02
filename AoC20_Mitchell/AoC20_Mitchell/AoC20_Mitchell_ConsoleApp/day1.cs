@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace AoC20_Mitchell_ConsoleApp
 {
-    public static class day1
+    public static class Day1
     {
         public static void Day1sexy()
         {
