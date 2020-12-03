@@ -14,7 +14,7 @@ def countValidity(list_strings):
 def checkValidity(string_item):
 	_strItems = string_item.split(" ")
 	_iFirst, _iSecond = map(int, _strItems[0].split("-"))
-	return True if (_strItems[2][_iFirst - 1] == _strItems[1][0]) ^ (_strItems[2][_iSecond - 1] == _strItems[1][0]) else False
+	return (_strItems[2][_iFirst - 1] == _strItems[1][0]) ^ (_strItems[2][_iSecond - 1] == _strItems[1][0])
 
 infile = open(r'input.txt', "r")
 listOfStrings = infile.readlines()

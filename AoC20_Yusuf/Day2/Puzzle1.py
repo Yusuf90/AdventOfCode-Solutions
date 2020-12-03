@@ -14,7 +14,7 @@ def countValidity(list_strings):
 def checkValidity(string_item):
 	_strItems = string_item.split(" ")
 	_iMin, _iMax = map(int, _strItems[0].split("-"))
-	return True if _iMin <= _strItems[2].count(_strItems[1][0]) <= _iMax else False
+	return _iMin <= _strItems[2].count(_strItems[1][0]) <= _iMax
 
 infile = open(r'input.txt', "r")
 listOfStrings = infile.readlines()
