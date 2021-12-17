@@ -1,8 +1,6 @@
 import sys
 import os
 import math
-import pandas as pd
-import numpy as np
 
 #Get to current directory of puzzle
 os.chdir(os.getcwd() + r'\Day4')
