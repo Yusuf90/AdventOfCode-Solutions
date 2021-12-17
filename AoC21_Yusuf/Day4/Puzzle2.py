@@ -2,50 +2,78 @@ import sys
 import os
 import math
 import pandas as pd
+import numpy as np
 
 #Get to current directory of puzzle
-os.chdir(os.getcwd() + r'\Day3')
+os.chdir(os.getcwd() + r'\Day4')
 
-def findRate(df_reports, searchForMost, currentBit):
-    #searchForMost parameter is a boolean where true is Most(Oxygen) and false is Least(CO2 Scrubber)
+#Creates list of bingo sheets that contains tuples(number, boolean): [[22, False], [13, False], ...]
+def createBingoSheets(list_split_lined, int_size):
+    _listBingoSheets = []
+    _listBingoSheet = []
+    for _element in list_split_lined:
+        if _element == "":
+            _listBingoSheet = []
+            continue        
+        _tempNumArray = [(int(x), False) for x in _element.split()]
+        _listBingoSheet.append(_tempNumArray)
+        if len(_listBingoSheet) == int_size:
+            _listBingoSheets.append(_listBingoSheet)
+    return _listBingoSheets
 
-    #base case: Stop if only 1 row is in dataframe
-    if(len(df_reports.index) == 1):
-        return df_reports.values.tolist()[0]
-    #general case: Return a new dataframe with selected rows that start with '1' on the selected bit.
-    else:
-        #Take most common value if searchForMost (Oxygen), else take least common value (CO2 Scrubber)        
-        search_criteria = df_reports[currentBit].value_counts().idxmax() if searchForMost else df_reports[currentBit].value_counts().idxmin()
+#Check if 2nd element of Tuple has a row of True's (Vertical and Horizontal)
+def checkBingoSheet(list_bingo_sheet):
+    #check horizontal
+    for _row in list_bingo_sheet:
+        if sum([item[1] for item in _row if item[1] == True]) == 5:
+            return True
+    #check vertical (by transposing the sheet first)
+    transposed_sheet = list(zip(*list_bingo_sheet))
+    for _row in transposed_sheet:
+        if sum([item[1] for item in _row if item[1] == True]) == 5:
+            return True
+    return False
 
-        #if both values occur equally amount of times. Choose dependant on searchForMost (Oxygen or CO2 Scrubber)
-        if df_reports[currentBit].value_counts().max() == df_reports[currentBit].value_counts().min():
-            search_criteria = '1' if searchForMost else '0'
-        
-        #pick only rows with search_criteria in selected column and put in a new DataFrame
-        df_new = df_reports.loc[df_reports[currentBit] == search_criteria]
-        return findRate(df_new, searchForMost, currentBit + 1)
+#Check if bingo sheet contains bingo pull, if so, put 2nd element of found tuple to True
+def crossNumber(list_bingo_sheet, int_bingopull):
+    #Find item and set item[1] = True if found
+    _elementFound = False
+    for _x, _row in enumerate(list_bingo_sheet):
+        if _elementFound:
+            break
+        for _y, _element in enumerate(_row):
+            if _element[0] == int_bingopull:
+                list_bingo_sheet[_x][_y] = (int_bingopull, True)
+                _elementFound = True
+                break
+    return list_bingo_sheet
 
-def calculateLifeSupportRate(list_reports):
-    #put list of list (str = list of characters) into dataframe
-    df_reports = pd.DataFrame.from_records(list_reports)
-    #drop last column containing '\n'
-    df_reports.drop(df_reports.columns[len(df_reports.columns)-1], axis=1, inplace=True)
+#Sum all numbers that are (x, False) where x is the numbers to be summed up
+def sumUnmarked(list_bingo_sheet):
+    _sum = 0
+    for _row in list_bingo_sheet:
+        _sum += sum([item[0] for item in _row if item[1] == False])
+    return _sum
 
-    listchr_oxygen_rate = findRate(df_reports, True, 0)
-    listchr_co2scrubber_rate = findRate(df_reports, False, 0)
-
-    #convert list of chars to string
-    str_oxygen_rate = "".join(listchr_oxygen_rate)
-    str_co2scrubber_rate = "".join(listchr_co2scrubber_rate)
-
-    #convert binary string to numeric
-    num_oxygen_rate = int(str_oxygen_rate, 2)
-    num_co2scrubber_rate = int(str_co2scrubber_rate, 2)
-
-    return num_oxygen_rate * num_co2scrubber_rate
+def calculateLastWinningBoardSum(list_bingo_sheets, list_bingo_pulls):
+    done_sheets = [False for i in range(len(list_bingo_sheets))]
+    for _bingopull in list_bingo_pulls:
+        for _i, _bingoSheet in enumerate(list_bingo_sheets):
+            if done_sheets[_i]:
+                continue         
+            list_bingo_sheets[_i] = crossNumber(_bingoSheet, _bingopull)            
+            if checkBingoSheet(list_bingo_sheets[_i]):
+                #Count False (sheets left) in done_sheets. If it is equal to 1, return sumUnmarked with the current sheet
+                if done_sheets.count(False) == 1:
+                    return sumUnmarked(list_bingo_sheets[_i]) * _bingopull
+                else:
+                    done_sheets[_i] = True
+    return 0 #no winner found??
 
 infile = open(r'input.txt', "r")
-listReports = infile.readlines()
+listBingoPulls = [int(x) for x in infile.readline().strip().split(',')]
+listSplitLined = infile.read().splitlines()
 infile.close()
 
-print(str(calculateLifeSupportRate(listReports)))
+listBingoSheets = createBingoSheets(listSplitLined, 5)
+print(str(calculateLastWinningBoardSum(listBingoSheets, listBingoPulls)))
